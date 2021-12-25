@@ -1,0 +1,40 @@
+<script type="module">
+  import { default as React, default as ReactDOM } from './preact-compat.js';
+  import htm from 'https://cdn.jsdelivr.net/npm/htm@3.1.0/dist/htm.module.js'
+  import styled from './styled-components-preact.js'
+  const html = htm.bind(React.createElement)
+
+  const Counter = props => {
+    const [count, setCount] = React.useState(parseInt(props.count))
+    return html`
+      <div>
+        <h1>${count}</h1>
+        <button onClick=${e => setCount(count - 1)}>Decrement</button>
+        <button onClick=${e => setCount(count + 1)}>Increment</button>
+      </div>
+    `
+  }
+
+  const Text = styled.h2`
+    color:red;
+    text-align: center;
+  `;
+
+  const Text2 = styled.h1({
+    color: 'blue',
+    'text-align': 'right',
+  })
+
+  ReactDOM.render(
+    html`
+    <div>
+      <h1>Look Ma! No script tags, no build step</h1>
+      <${Counter} count=0 />
+      <${Text}> 12345 </Text>
+      <${Text2}> 67890 </Text2>
+    </div>
+    `,
+    document.body
+  )
+
+</script>
