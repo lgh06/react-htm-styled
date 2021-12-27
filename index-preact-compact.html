@@ -1,41 +1,53 @@
-<script type="module">
-  import { default as React, default as ReactDOM } from './preact-compat.js';
-  import htm from './public/js/htm.module.js'
-  import styled from './public/js/styled-components-preact.js'
-  const html = htm.bind(React.createElement)
 
-  const Counter = props => {
-    const [count, setCount] = React.useState(parseInt(props.count))
-    return html`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    import { default as React, default as ReactDOM } from './preact-compat.js';
+    import htm from './public/js/htm.module.js'
+    import styled from './public/js/styled-components-preact.js'
+    const html = htm.bind(React.createElement)
+  
+    const Counter = props => {
+      const [count, setCount] = React.useState(parseInt(props.count))
+      return html`
+        <div>
+          <h1>${count}</h1>
+          <button onClick=${e => setCount(count - 1)}>Decrement</button>
+          <button onClick=${e => setCount(count + 1)}>Increment</button>
+        </div>
+      `
+    }
+  
+    const Text = styled.h2`
+      color:red;
+      text-align: center;
+    `;
+  
+    const Text2 = styled.h1({
+      color: 'blue',
+      'text-align': 'right',
+    })
+  
+    ReactDOM.render(
+      html`
       <div>
-        <h1>${count}</h1>
-        <button onClick=${e => setCount(count - 1)}>Decrement</button>
-        <button onClick=${e => setCount(count + 1)}>Increment</button>
+        <h1>Look Ma! No script tags, no build step</h1>
+        <${Counter} count=0 />
+        <${Text}> 12345 </Text>
+        <${Text2}> 67890 </Text2>
+        <a href="./index.html">see also React</a>
       </div>
-    `
-  }
-
-  const Text = styled.h2`
-    color:red;
-    text-align: center;
-  `;
-
-  const Text2 = styled.h1({
-    color: 'blue',
-    'text-align': 'right',
-  })
-
-  ReactDOM.render(
-    html`
-    <div>
-      <h1>Look Ma! No script tags, no build step</h1>
-      <${Counter} count=0 />
-      <${Text}> 12345 </Text>
-      <${Text2}> 67890 </Text2>
-      <a href="./index.html">see also React</a>
-    </div>
-    `,
-    document.body
-  )
-
-</script>
+      `,
+      document.body
+    )
+  
+  </script>
+</body>
+</html>
