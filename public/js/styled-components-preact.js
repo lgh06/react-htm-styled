@@ -1,5 +1,5 @@
 import { isValidElementType, typeOf, isElement } from './es-react/react-is.js';
-import r$1, { useState, useContext, useMemo, useEffect, useRef, useDebugValue, createElement } from './preact-compat';
+import r$1, { useState, useContext, useMemo, useEffect, useRef, useDebugValue, createElement } from './preact-compat.js';
 
 //
 
