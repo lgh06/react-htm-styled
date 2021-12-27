@@ -1,5 +1,5 @@
-import { isValidElementType, typeOf, isElement } from 'https://cdn.jsdelivr.net/npm/@webest/es-react@0.0.1/react-is.js';
-import r$1, { useState, useContext, useMemo, useEffect, useRef, useDebugValue, createElement } from 'https://cdn.jsdelivr.net/npm/@webest/es-react@0.0.1/react.js';
+import { isValidElementType, typeOf, isElement } from './es-react/react-is.js';
+import r$1, { useState, useContext, useMemo, useEffect, useRef, useDebugValue, createElement } from './es-react/react.js';
 
 //
 

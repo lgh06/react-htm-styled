@@ -6,8 +6,8 @@
 // https://cdn.jsdelivr.net/npm/preact@10.6.4/dist/preact.module.js
 import {useState as n, useReducer as t, useEffect as e, useLayoutEffect as r, useRef as u, useImperativeHandle as o, useMemo as i, useCallback as l, useContext as c, useDebugValue as f} from "./preact-hooks.js";
 export * from "./preact-hooks.js";
-import {Component as a, createElement as s, options as h, toChildArray as d, Fragment as v, render as p, hydrate as m, cloneElement as y, createRef as b, createContext as _} from "https://cdn.jsdelivr.net/npm/preact@10.6.4/dist/preact.module.js";
-export {createElement, createContext, createRef, Fragment, Component} from "https://cdn.jsdelivr.net/npm/preact@10.6.4/dist/preact.module.js";
+import {Component as a, createElement as s, options as h, toChildArray as d, Fragment as v, render as p, hydrate as m, cloneElement as y, createRef as b, createContext as _} from "./preact.module.js";
+export {createElement, createContext, createRef, Fragment, Component} from "./preact.module.js";
 function S(n, t) {
     for (var e in t)
         n[e] = t[e];

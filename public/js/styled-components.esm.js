@@ -5,8 +5,8 @@ let process = {env: {}};
 
 // starts here
 // react and react-is modified
-import {typeOf as e, isElement as t, isValidElementType as n} from "https://cdn.jsdelivr.net/npm/@webest/es-react@0.0.1/react-is.js";
-import r, {useState as o, useContext as s, useMemo as i, useEffect as a, useRef as c, createElement as u, useDebugValue as l} from "https://cdn.jsdelivr.net/npm/@webest/es-react@0.0.1/react.js";
+import {typeOf as e, isElement as t, isValidElementType as n} from "./es-react/react-is.js";
+import r, {useState as o, useContext as s, useMemo as i, useEffect as a, useRef as c, createElement as u, useDebugValue as l} from "./es-react/react.js";
 import d from "shallowequal";
 import h from "@emotion/stylis";
 import p from "@emotion/unitless";
