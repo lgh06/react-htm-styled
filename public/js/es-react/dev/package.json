@@ -1,0 +1,7 @@
+{
+  "name": "@webest/es-react",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "module": "index.js"
+}
